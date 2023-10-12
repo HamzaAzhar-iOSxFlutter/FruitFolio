@@ -1,5 +1,6 @@
 # Group Members
 1-Daniyal Ahmed Siddiqui
+2-Muhammad Hamza Azhar
 
 # FruitFolio
 Your guide to fresh, healthy fruits and veggies. Explore a variety, find nutritional info, and discover delicious recipes and fun fact in a snap!
@@ -14,3 +15,11 @@ Your guide to fresh, healthy fruits and veggies. Explore a variety, find nutriti
 4-Vegetable Descriptions: Explore a variety of vegetables, complemented by comprehensive descriptions to aid your culinary adventures.
 
 5-Vegetable Nutrition Values: Uncover the nutritional content of vegetables, accurately measured per 100g, ensuring you're aware of their health benefits.
+
+6-Search Feature: Easily find your favorite fruits and vegetables through our intuitive search feature. Search by name, and access the information you need in seconds.
+
+7-Favorites and Bookmarks: Personalize your FruitFolio by marking your favorite fruits and vegetables, and conveniently bookmark items for quick access.
+
+8-Offline Accessibility: FruitFolio is designed for use in any situation, with full offline functionality. Access all the information you need without an internet connection.
+
+9-Allergen Information: Stay informed about allergens. FruitFolio provides essential allergen information to ensure safe and enjoyable dietary choices.
