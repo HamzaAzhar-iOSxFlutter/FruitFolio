@@ -12,6 +12,36 @@ import SwiftUI
 //MARK: - FRUIT DATA
 let fruitsData: [Fruit] = [
     Fruit(
+        title: "Banana",
+        headline: "Bananas are nutritious and delicious fruits enjoyed by people of all ages worldwide.",
+        image: "banana",
+        gradientColors: [Color("ColorLemonLight"), Color("ColorLemonDark")],
+        description: """
+            Bananas are elongated, edible fruits produced by various species of large herbaceous flowering plants in the genus Musa. They are native to tropical regions of Southeast Asia and are now grown in many warm parts of the world.
+
+            Bananas come in a variety of sizes and colors when ripe, including yellow, red, and green. They are one of the most popular fruits globally and are known for their sweet taste and high nutritional value.
+
+            USES
+
+            Bananas are typically eaten raw, but they can also be used in a variety of culinary dishes. They are often sliced and added to cereals, yogurt, or desserts. Bananas can be blended into smoothies, baked into bread and muffins, or frozen for a refreshing treat. In some cuisines, bananas are cooked and served as a side dish.
+
+            Bananas are also a primary ingredient in banana-based beverages, such as banana shakes and banana smoothies. Additionally, dried bananas, known as banana chips, are a popular snack.
+
+            NUTRITION
+
+            Bananas are a rich source of carbohydrates, especially natural sugars like glucose, fructose, and sucrose. They are low in fat and protein. Bananas are also packed with essential vitamins and minerals, including vitamin C, vitamin B6, potassium, manganese, and dietary fiber.
+
+            One medium-sized banana contains approximately 105 calories, making it a relatively low-calorie snack option. Bananas are often recommended as a quick source of energy due to their high carbohydrate content.
+
+            HEALTH BENEFITS
+
+            Bananas are not only delicious but also offer several health benefits. They are a good source of dietary fiber, which promotes digestive health. The potassium in bananas helps maintain proper heart function and blood pressure levels. Bananas are also known to boost mood and provide a sense of well-being due to their serotonin and dopamine content.
+
+            So, whether you enjoy them as a convenient snack or incorporate them into your favorite recipes, bananas are a tasty and nutritious choice for a healthy diet.
+        """,
+        nutrition: ["376 kJ (89 kcal)", "22.84 g", "1.09 g", "0.33 g", "A, B1, B2, B3, B5, B6, B9, C", "Potassium, Magnesium, Phosphorus, Calcium, Iron, Sodium, Zinc"]
+    ),
+    Fruit(
         title: "Blueberry",
         headline: "Blueberries are sweet, nutritious and wildly popular fruit all over the world.",
         image: "blueberry",
