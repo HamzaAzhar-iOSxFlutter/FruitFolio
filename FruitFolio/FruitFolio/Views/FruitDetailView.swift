@@ -30,7 +30,7 @@ struct FruitDetailView: View {
                             .font(.headline)
                             .multilineTextAlignment(.leading)
                         //NUTRIENTS
-                        //NutrientsDetailView(fruit: fruit)
+                        NutrientsDetailView(fruit: fruit)
                             
                         //SUBHEADLINE
                         Text("Learn more about \(self.fruit.title)".uppercased())
@@ -43,7 +43,7 @@ struct FruitDetailView: View {
                             .multilineTextAlignment(.leading)
                         
                         //LINK
-                       // SourceLinkView()
+                        SourceLinkView()
                             .padding(.top, 10)
                             .padding(.bottom, 40)
                     }//: VSTACK
