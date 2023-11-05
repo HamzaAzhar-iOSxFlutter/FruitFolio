@@ -13,6 +13,11 @@
 		70A4ADA92AE72D9D008FDABA /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4ADA82AE72D9D008FDABA /* ColorExtensions.swift */; };
 		70A4ADAB2AE733D5008FDABA /* SourceLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4ADAA2AE733D5008FDABA /* SourceLinkView.swift */; };
 		70A4ADAD2AE73413008FDABA /* NutrientsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4ADAC2AE73412008FDABA /* NutrientsDetailView.swift */; };
+		BB062D712AF728CD00BB21F2 /* VegetableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB062D702AF728CD00BB21F2 /* VegetableData.swift */; };
+		BB062D732AF728F200BB21F2 /* VegetableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB062D722AF728F200BB21F2 /* VegetableModel.swift */; };
+		BB062D762AF72B2100BB21F2 /* VegetableDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB062D752AF72B2100BB21F2 /* VegetableDetailView.swift */; };
+		BB062D782AF72B8500BB21F2 /* VegetableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB062D772AF72B8500BB21F2 /* VegetableHeaderView.swift */; };
+		BB062D7C2AF7F4F000BB21F2 /* VegetableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB062D7B2AF7F4F000BB21F2 /* VegetableRowView.swift */; };
 		BB8FFF7D2AD64B78008D91ED /* FruitFolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8FFF7C2AD64B78008D91ED /* FruitFolioApp.swift */; };
 		BB8FFF7F2AD64B78008D91ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8FFF7E2AD64B78008D91ED /* ContentView.swift */; };
 		BB8FFF812AD64B7A008D91ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8FFF802AD64B7A008D91ED /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 		70A4ADA82AE72D9D008FDABA /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		70A4ADAA2AE733D5008FDABA /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
 		70A4ADAC2AE73412008FDABA /* NutrientsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsDetailView.swift; sourceTree = "<group>"; };
+		BB062D702AF728CD00BB21F2 /* VegetableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableData.swift; sourceTree = "<group>"; };
+		BB062D722AF728F200BB21F2 /* VegetableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableModel.swift; sourceTree = "<group>"; };
+		BB062D752AF72B2100BB21F2 /* VegetableDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableDetailView.swift; sourceTree = "<group>"; };
+		BB062D772AF72B8500BB21F2 /* VegetableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableHeaderView.swift; sourceTree = "<group>"; };
+		BB062D7B2AF7F4F000BB21F2 /* VegetableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableRowView.swift; sourceTree = "<group>"; };
 		BB8FFF792AD64B78008D91ED /* FruitFolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitFolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8FFF7C2AD64B78008D91ED /* FruitFolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitFolioApp.swift; sourceTree = "<group>"; };
 		BB8FFF7E2AD64B78008D91ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +71,16 @@
 				70A4ADA82AE72D9D008FDABA /* ColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB062D742AF72B0E00BB21F2 /* Vegetables */ = {
+			isa = PBXGroup;
+			children = (
+				BB062D752AF72B2100BB21F2 /* VegetableDetailView.swift */,
+				BB062D772AF72B8500BB21F2 /* VegetableHeaderView.swift */,
+				BB062D7B2AF7F4F000BB21F2 /* VegetableRowView.swift */,
+			);
+			path = Vegetables;
 			sourceTree = "<group>";
 		};
 		BB8FFF702AD64B78008D91ED = {
@@ -113,6 +133,7 @@
 		BBB036CF2AE48BE600D7E388 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB062D742AF72B0E00BB21F2 /* Vegetables */,
 				BB8FFF7E2AD64B78008D91ED /* ContentView.swift */,
 				BBB036D02AE48C0100D7E388 /* OnboardingView.swift */,
 				BBB036D22AE48C2A00D7E388 /* FruitCardView.swift */,
@@ -130,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB036D72AE48D5C00D7E388 /* FruitData.swift */,
+				BB062D702AF728CD00BB21F2 /* VegetableData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -138,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB036DA2AE48D8A00D7E388 /* FruitModel.swift */,
+				BB062D722AF728F200BB21F2 /* VegetableModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,10 +235,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB062D732AF728F200BB21F2 /* VegetableModel.swift in Sources */,
+				BB062D762AF72B2100BB21F2 /* VegetableDetailView.swift in Sources */,
 				70A4ADA92AE72D9D008FDABA /* ColorExtensions.swift in Sources */,
 				7055ED2C2AE724C60067D0CF /* FruitRowView.swift in Sources */,
 				7055ED282AE723830067D0CF /* FruitDetailView.swift in Sources */,
 				BBB036D12AE48C0100D7E388 /* OnboardingView.swift in Sources */,
+				BB062D782AF72B8500BB21F2 /* VegetableHeaderView.swift in Sources */,
+				BB062D7C2AF7F4F000BB21F2 /* VegetableRowView.swift in Sources */,
 				70A4ADAD2AE73413008FDABA /* NutrientsDetailView.swift in Sources */,
 				BBB036DB2AE48D8A00D7E388 /* FruitModel.swift in Sources */,
 				BBB036D32AE48C2A00D7E388 /* FruitCardView.swift in Sources */,
@@ -223,6 +250,7 @@
 				7055ED2A2AE723B40067D0CF /* FruitHeaderView.swift in Sources */,
 				BB8FFF7F2AD64B78008D91ED /* ContentView.swift in Sources */,
 				70A4ADAB2AE733D5008FDABA /* SourceLinkView.swift in Sources */,
+				BB062D712AF728CD00BB21F2 /* VegetableData.swift in Sources */,
 				BBB036D52AE48CE300D7E388 /* StartButtonView.swift in Sources */,
 				BB8FFF7D2AD64B78008D91ED /* FruitFolioApp.swift in Sources */,
 			);
@@ -363,6 +391,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +423,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
