@@ -30,9 +30,7 @@ struct VegetableDetailView: View {
                             .font(.headline)
                             .multilineTextAlignment(.leading)
                         //NUTRIENTS
-                       /*
-                        The nutrient group should be placed here
-                        */
+                       NutrientVegetableView(vegetable: vegetable)
                             
                         //SUBHEADLINE
                         Text("Learn more about \(self.vegetable.title)".uppercased())
