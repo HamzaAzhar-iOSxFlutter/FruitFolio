@@ -19,6 +19,23 @@ struct ContentView: View {
     var vegetables: [Vegetable] = vegetablesData
     @State private var isShowingSettings: Bool = false
     @State private var category: Category = .fruits
+    @State private var searchText: String = ""
+    
+    var filteredFruits: [Fruit] {
+        if searchText.isEmpty {
+            return fruits
+        } else {
+            return fruits.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+        }
+    }
+
+    var filteredVegetables: [Vegetable] {
+        if searchText.isEmpty {
+            return vegetables
+        } else {
+            return vegetables.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+        }
+    }
     
     var body: some View {
         
@@ -33,11 +50,14 @@ struct ContentView: View {
                 .pickerStyle(.segmented)
                 .padding(10)
                 
+                SearchBarView(searchText: $searchText)
+                    .padding(.horizontal, 20)
+                
                 
                 switch category {
                 case .fruits:
                     List {
-                        ForEach(self.fruits.shuffled()) { item in
+                        ForEach(self.filteredFruits.shuffled()) { item in
                             NavigationLink(destination: FruitDetailView(fruit: item)) {
                                 FruitRowView(fruit: item)
                                     .padding(.vertical, 4)
@@ -50,7 +70,7 @@ struct ContentView: View {
                     .navigationBarTitleDisplayMode(.large)
                 case .vegetables:
                     List {
-                        ForEach(self.vegetables.shuffled()) { item in
+                        ForEach(self.filteredVegetables.shuffled()) { item in
                             NavigationLink(destination: VegetableDetailView(vegetable: item)) {
                                 VegetableRowView(vegetable: item)
                                     .padding(.vertical, 4)

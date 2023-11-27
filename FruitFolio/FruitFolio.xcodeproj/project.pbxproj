@@ -28,6 +28,7 @@
 		BBB036D52AE48CE300D7E388 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB036D42AE48CE300D7E388 /* StartButtonView.swift */; };
 		BBB036D82AE48D5C00D7E388 /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB036D72AE48D5C00D7E388 /* FruitData.swift */; };
 		BBB036DB2AE48D8A00D7E388 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB036DA2AE48D8A00D7E388 /* FruitModel.swift */; };
+		BBD785AB2B13C1D400DA8A0E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD785AA2B13C1D400DA8A0E /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		BBB036D72AE48D5C00D7E388 /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
 		BBB036DA2AE48D8A00D7E388 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		BBB036DC2AE4901C00D7E388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BBD785AA2B13C1D400DA8A0E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				7055ED2B2AE724C60067D0CF /* FruitRowView.swift */,
 				70A4ADAA2AE733D5008FDABA /* SourceLinkView.swift */,
 				70A4ADAC2AE73412008FDABA /* NutrientsDetailView.swift */,
+				BBD785AA2B13C1D400DA8A0E /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD785AB2B13C1D400DA8A0E /* SearchBarView.swift in Sources */,
 				7097576D2AF9CDE200C65DAD /* NutrientVegetableView.swift in Sources */,
 				BB062D732AF728F200BB21F2 /* VegetableModel.swift in Sources */,
 				BB062D762AF72B2100BB21F2 /* VegetableDetailView.swift in Sources */,
