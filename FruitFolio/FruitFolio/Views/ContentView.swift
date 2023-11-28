@@ -14,6 +14,7 @@ enum Category {
 
 struct ContentView: View {
     
+    @ObservedObject var favouriteManager: FavouriteManager
     let backgroundColor = Color(hex: "#f2f2f7")
     var fruits: [Fruit] = fruitsData
     var vegetables: [Vegetable] = vegetablesData
@@ -58,7 +59,7 @@ struct ContentView: View {
                 case .fruits:
                     List {
                         ForEach(self.filteredFruits.shuffled()) { item in
-                            NavigationLink(destination: FruitDetailView(fruit: item)) {
+                            NavigationLink(destination: FruitDetailView(fruit: item, favouriteManager: self.favouriteManager)) {
                                 FruitRowView(fruit: item)
                                     .padding(.vertical, 4)
                                 
@@ -71,7 +72,7 @@ struct ContentView: View {
                 case .vegetables:
                     List {
                         ForEach(self.filteredVegetables.shuffled()) { item in
-                            NavigationLink(destination: VegetableDetailView(vegetable: item)) {
+                            NavigationLink(destination: VegetableDetailView(vegetable: item, favouriteManager: self.favouriteManager)) {
                                 VegetableRowView(vegetable: item)
                                     .padding(.vertical, 4)
                                 
@@ -85,11 +86,5 @@ struct ContentView: View {
             }.background(backgroundColor)
         }//: NAVIGATION
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(fruits: fruitsData, vegetables: vegetablesData)
     }
 }

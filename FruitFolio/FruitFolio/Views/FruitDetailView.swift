@@ -10,6 +10,7 @@ import SwiftUI
 struct FruitDetailView: View {
     
     let fruit: Fruit
+    @ObservedObject var favouriteManager: FavouriteManager
     
     var body: some View {
         NavigationView {
@@ -18,13 +19,22 @@ struct FruitDetailView: View {
                     //HEADER
                     
                     FruitHeaderView(fruit: fruit)
-                    
                     VStack(alignment: .leading, spacing: 20) {
                         //TITLE
-                        Text(self.fruit.title)
-                            .font(.largeTitle)
-                            .fontWeight(.heavy)
-                            .foregroundColor(fruit.gradientColors[1])
+                        HStack {
+                            Text(self.fruit.title)
+                                .font(.largeTitle)
+                                .fontWeight(.heavy)
+                                .foregroundColor(fruit.gradientColors[1])
+                            Spacer()
+                            Button(action: {
+                                self.favouriteManager.favouriteFruits.append(self.fruit)
+                            }, label: {
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(.red)
+                                    .font(.title)
+                            })
+                        }
                         //HEADLINE
                         Text(self.fruit.headline)
                             .font(.headline)
@@ -57,8 +67,4 @@ struct FruitDetailView: View {
         }//: NAVIGATIONVIEW
         .navigationViewStyle(StackNavigationViewStyle())
     }
-}
-
-#Preview {
-    FruitDetailView(fruit: fruitsData[0])
 }

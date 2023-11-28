@@ -10,12 +10,23 @@ import SwiftUI
 @main
 struct FruitFolioApp: App {
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    @StateObject var favouriteManager: FavouriteManager = FavouriteManager()
     var body: some Scene {
         WindowGroup {
             if self.isOnboarding {
                 OnboardingView()
-            }else {
-                ContentView()
+            } else {
+                TabView {
+                    ContentView(favouriteManager: favouriteManager)
+                        .tabItem {
+                            Label("Catalogue", systemImage: "house.circle.fill")
+                        }
+                    
+                    FavouritesView(favouriteManager: favouriteManager)
+                        .tabItem {
+                            Label("Favourites", systemImage: "heart.fill")
+                        }
+                }
             }
         }
     }
