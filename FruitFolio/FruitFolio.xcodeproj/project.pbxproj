@@ -31,6 +31,9 @@
 		BBB036D82AE48D5C00D7E388 /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB036D72AE48D5C00D7E388 /* FruitData.swift */; };
 		BBB036DB2AE48D8A00D7E388 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB036DA2AE48D8A00D7E388 /* FruitModel.swift */; };
 		BBD785AB2B13C1D400DA8A0E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD785AA2B13C1D400DA8A0E /* SearchBarView.swift */; };
+		BBFBEAEE2B25022000A5007E /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBEAED2B25022000A5007E /* ConnectionManager.swift */; };
+		BBFBEAF12B25027000A5007E /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = BBFBEAF02B25027000A5007E /* PopupView */; };
+		BBFBEAF42B25031600A5007E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBEAF32B25031600A5007E /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,8 @@
 		BBB036DA2AE48D8A00D7E388 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		BBB036DC2AE4901C00D7E388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BBD785AA2B13C1D400DA8A0E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		BBFBEAED2B25022000A5007E /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		BBFBEAF32B25031600A5007E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFBEAF12B25027000A5007E /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				704F59D52B16A98C00E4B246 /* FavouriteManager.swift */,
+				BBFBEAED2B25022000A5007E /* ConnectionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 		BB8FFF7B2AD64B78008D91ED /* FruitFolio */ = {
 			isa = PBXGroup;
 			children = (
+				BBFBEAF22B25030200A5007E /* Independent View Components */,
 				704F59D42B16A97800E4B246 /* Managers */,
 				70A4ADA72AE72D8A008FDABA /* Extensions */,
 				BBB036DC2AE4901C00D7E388 /* Info.plist */,
@@ -185,6 +193,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BBFBEAF22B25030200A5007E /* Independent View Components */ = {
+			isa = PBXGroup;
+			children = (
+				BBFBEAF32B25031600A5007E /* ToastView.swift */,
+			);
+			path = "Independent View Components";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,6 +217,9 @@
 			dependencies = (
 			);
 			name = FruitFolio;
+			packageProductDependencies = (
+				BBFBEAF02B25027000A5007E /* PopupView */,
+			);
 			productName = FruitFolio;
 			productReference = BB8FFF792AD64B78008D91ED /* FruitFolio.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +248,9 @@
 				Base,
 			);
 			mainGroup = BB8FFF702AD64B78008D91ED;
+			packageReferences = (
+				BBFBEAEF2B25027000A5007E /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = BB8FFF7A2AD64B78008D91ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,9 +289,11 @@
 				BB062D7C2AF7F4F000BB21F2 /* VegetableRowView.swift in Sources */,
 				70A4ADAD2AE73413008FDABA /* NutrientsDetailView.swift in Sources */,
 				BBB036DB2AE48D8A00D7E388 /* FruitModel.swift in Sources */,
+				BBFBEAEE2B25022000A5007E /* ConnectionManager.swift in Sources */,
 				BBB036D32AE48C2A00D7E388 /* FruitCardView.swift in Sources */,
 				704F59D62B16A98C00E4B246 /* FavouriteManager.swift in Sources */,
 				BBB036D82AE48D5C00D7E388 /* FruitData.swift in Sources */,
+				BBFBEAF42B25031600A5007E /* ToastView.swift in Sources */,
 				7055ED2A2AE723B40067D0CF /* FruitHeaderView.swift in Sources */,
 				704F59D82B16A9D500E4B246 /* FavouritesView.swift in Sources */,
 				BB8FFF7F2AD64B78008D91ED /* ContentView.swift in Sources */,
@@ -483,6 +507,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBFBEAEF2B25027000A5007E /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBFBEAF02B25027000A5007E /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBFBEAEF2B25027000A5007E /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB8FFF712AD64B78008D91ED /* Project object */;
 }

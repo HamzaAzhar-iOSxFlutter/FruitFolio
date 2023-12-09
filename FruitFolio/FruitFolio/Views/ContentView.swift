@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 enum Category {
     case fruits
@@ -14,6 +15,7 @@ enum Category {
 
 struct ContentView: View {
     
+    @State var isShowingToast: Bool = false
     @ObservedObject var favouriteManager: FavouriteManager
     let backgroundColor = Color(hex: "#f2f2f7")
     var fruits: [Fruit] = fruitsData
@@ -21,6 +23,9 @@ struct ContentView: View {
     @State private var isShowingSettings: Bool = false
     @State private var category: Category = .fruits
     @State private var searchText: String = ""
+    @ObservedObject var networkManager: ConnectionManager
+    @State private var networkStatus: NetworkStatus = .success
+    @State private var isFirstCheckDone: Bool = false
     
     var filteredFruits: [Fruit] {
         if searchText.isEmpty {
@@ -29,7 +34,7 @@ struct ContentView: View {
             return fruits.filter { $0.title.lowercased().contains(searchText.lowercased()) }
         }
     }
-
+    
     var filteredVegetables: [Vegetable] {
         if searchText.isEmpty {
             return vegetables
@@ -42,6 +47,17 @@ struct ContentView: View {
         
         NavigationView {
             VStack {
+                
+                switch self.networkManager.isConnected {
+                case true:
+                    if isFirstCheckDone {
+                        self.showToastOnConnectionStatus(status: .success)
+                    }
+                case false:
+                    self.showToastOnConnectionStatus(status: .failure)
+                }
+                
+                
                 
                 Picker("", selection: $category) {
                     Text("Fruits").tag(Category.fruits)
@@ -58,7 +74,7 @@ struct ContentView: View {
                 switch category {
                 case .fruits:
                     List {
-                        ForEach(self.filteredFruits.shuffled()) { item in
+                        ForEach(self.filteredFruits) { item in
                             NavigationLink(destination: FruitDetailView(fruit: item, favouriteManager: self.favouriteManager)) {
                                 FruitRowView(fruit: item)
                                     .padding(.vertical, 4)
@@ -71,7 +87,7 @@ struct ContentView: View {
                     .navigationBarTitleDisplayMode(.large)
                 case .vegetables:
                     List {
-                        ForEach(self.filteredVegetables.shuffled()) { item in
+                        ForEach(self.filteredVegetables) { item in
                             NavigationLink(destination: VegetableDetailView(vegetable: item, favouriteManager: self.favouriteManager)) {
                                 VegetableRowView(vegetable: item)
                                     .padding(.vertical, 4)
@@ -83,8 +99,25 @@ struct ContentView: View {
                     .navigationBarTitleDisplayMode(.large)
                     
                 }
-            }.background(backgroundColor)
+            }
+            .background(backgroundColor)
+            .popup(isPresented: $isShowingToast) {
+                ToastView(title: self.networkStatus == .success ? "Internet Connected" : "Internet Connection Lost", networkStatus: self.$networkStatus)
+            } customize: {
+                $0
+                    .autohideIn(4)
+                    .appearFrom(.bottom)
+            }
         }//: NAVIGATION
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    fileprivate func showToastOnConnectionStatus(status: NetworkStatus) -> some View {
+        return Rectangle().fill(Color.clear).frame(height: 0)
+            .onAppear {
+                self.isShowingToast = true
+                self.isFirstCheckDone = true
+                self.networkStatus = status
+            }
     }
 }
