@@ -84,6 +84,10 @@ struct FavouritesView: View {
                     .appearFrom(.bottom)
             }
         }
+        .onDisappear {
+            self.isFirstCheckDone = true
+        }
+
     }
     
     fileprivate func showToastOnConnectionStatus(status: NetworkStatus) -> some View {

@@ -110,6 +110,9 @@ struct ContentView: View {
             }
         }//: NAVIGATION
         .navigationViewStyle(StackNavigationViewStyle())
+        .onDisappear {
+            self.isFirstCheckDone = true
+        }
     }
     
     fileprivate func showToastOnConnectionStatus(status: NetworkStatus) -> some View {
