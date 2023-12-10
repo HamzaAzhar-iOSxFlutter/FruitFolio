@@ -11,6 +11,7 @@ let vegetablesData: [Vegetable] = [
 
     Vegetable(
         title: "Spinach",
+        isFavourite: false,
         headline: "Spinach is a nutrient-packed leafy green vegetable with a host of health benefits.",
         image: "spinach",
         gradientColors: [Color("ColorCherryLight"), Color("ColorCherryDark")],
@@ -37,11 +38,14 @@ let vegetablesData: [Vegetable] = [
 
             So, whether you incorporate it into your daily meals or enjoy it in salads, spinach is a fantastic addition to a balanced and nutritious diet.
         """,
-        nutrition: ["23 kJ (7 kcal)", "0.86 g", "0.83 g", "0.40 g", "A, C, K, Folate", "Iron, Calcium, Magnesium"]
+        nutrition: ["23 kJ (7 kcal)", "0.86 g", "0.83 g", "0.40 g", "A, C, K, Folate", "Iron, Calcium, Magnesium"],
+        allergens: "High-histamine",
+        allergenSymptoms: ["Gastrointestinal infection", "Respiratory problems"]
     ),
     
     Vegetable(
         title: "Tomato",
+        isFavourite: false,
         headline: "Tomatoes are vibrant red fruits that are not only delicious but also packed with essential nutrients.",
         image: "tomato",
         gradientColors: [Color("ColorAppleLight"), Color("ColorAppleDark")],
@@ -68,11 +72,14 @@ let vegetablesData: [Vegetable] = [
 
             Whether you incorporate them into your daily meals or use them as a base for your favorite recipes, tomatoes are a flavorful and nutritious choice for your diet.
         """,
-        nutrition: ["74 kJ (18 kcal)", "2.63 g", "0.20 g", "0.88 g", "A, C, K", "Potassium"]
+        nutrition: ["74 kJ (18 kcal)", "2.63 g", "0.20 g", "0.88 g", "A, C, K", "Potassium"],
+        allergens: "Histamines",
+        allergenSymptoms: ["Digestive tracts infection"]
     ),
     
     Vegetable(
         title: "Cucumber",
+        isFavourite: false,
         headline: "Cucumbers are crisp and refreshing vegetables known for their mild flavor and high water content.",
         image: "cucumber",
         gradientColors: [Color("ColorLimeLight"), Color("ColorLimeDark")],
@@ -97,11 +104,14 @@ let vegetablesData: [Vegetable] = [
 
             Whether you incorporate them into your daily meals or savor them as a crunchy snack, cucumbers are a delicious and hydrating choice for your diet.
         """,
-        nutrition: ["65 kJ (16 kcal)", "1.67 g", "0.16 g", "0.65 g", "K, A, C", "Dietary Fiber"]
+        nutrition: ["65 kJ (16 kcal)", "1.67 g", "0.16 g", "0.65 g", "K, A, C", "Dietary Fiber"],
+        allergens: "Oral allergy syndrome",
+        allergenSymptoms: ["Dermatitis", "Urticaria"]
     ),
     
     Vegetable(
         title: "Potato",
+        isFavourite: false,
         headline: "Potatoes are versatile starchy vegetables known for their wide range of culinary uses.",
         image: "potato",
         gradientColors: [Color("ColorGrapefruitLight"), Color("ColorGrapefruitDark")],
@@ -126,11 +136,14 @@ let vegetablesData: [Vegetable] = [
 
             Whether you enjoy them as a side dish, part of a hearty stew, or as a crispy snack, potatoes are a versatile and satisfying addition to many recipes.
         """,
-        nutrition: ["322 kJ (77 kcal)", "0.82 g", "0.10 g", "2.02 g", "C, B6, Potassium", "Dietary Fiber"]
+        nutrition: ["322 kJ (77 kcal)", "0.82 g", "0.10 g", "2.02 g", "C, B6, Potassium", "Dietary Fiber"],
+        allergens: "Solanine",
+        allergenSymptoms: ["Lung congestion", "Bloating"]
     ),
     
     Vegetable(
         title: "Carrot",
+        isFavourite: false,
         headline: "Carrots are vibrant orange root vegetables known for their sweet flavor and numerous health benefits.",
         image: "carrot",
         gradientColors: [Color("ColorGrapefruitLight"), Color("ColorGrapefruitDark")],
@@ -155,7 +168,9 @@ let vegetablesData: [Vegetable] = [
 
             Whether you incorporate them into your daily meals, use them as a healthy snack, or enjoy them in different recipes, carrots are a nutritious and flavorful choice for your diet.
         """,
-        nutrition: ["173 kJ (41 kcal)", "4.74 g", "0.24 g", "0.93 g", "A, K", "Dietary Fiber"]
+        nutrition: ["173 kJ (41 kcal)", "4.74 g", "0.24 g", "0.93 g", "A, K", "Dietary Fiber"],
+        allergens: "Bet v 1",
+        allergenSymptoms: ["Scratchy throat"]
     )
 
 

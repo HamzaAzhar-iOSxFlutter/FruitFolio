@@ -32,6 +32,22 @@ struct FruitRowView: View {
                     .font(.caption)
                     .foregroundColor(Color.secondary)
             }
+            
+            Spacer()
+            
+            if !self.fruit.allergens.isEmpty {
+                Circle()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.yellow)
+                    .overlay(
+                        Image(systemName: "allergens")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(.red)
+                    )
+            }
+
         }//: HSTACK
     }
 }

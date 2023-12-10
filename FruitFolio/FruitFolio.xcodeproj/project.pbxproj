@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		704F59D62B16A98C00E4B246 /* FavouriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D52B16A98C00E4B246 /* FavouriteManager.swift */; };
 		704F59D82B16A9D500E4B246 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72B16A9D500E4B246 /* FavouritesView.swift */; };
+		704F59DA2B264C1400E4B246 /* FruitAllergenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D92B264C1400E4B246 /* FruitAllergenView.swift */; };
+		704F59DC2B264CB900E4B246 /* VegetableAllergenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DB2B264CB900E4B246 /* VegetableAllergenView.swift */; };
 		7055ED282AE723830067D0CF /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055ED272AE723830067D0CF /* FruitDetailView.swift */; };
 		7055ED2A2AE723B40067D0CF /* FruitHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055ED292AE723B40067D0CF /* FruitHeaderView.swift */; };
 		7055ED2C2AE724C60067D0CF /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055ED2B2AE724C60067D0CF /* FruitRowView.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		704F59D52B16A98C00E4B246 /* FavouriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteManager.swift; sourceTree = "<group>"; };
 		704F59D72B16A9D500E4B246 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		704F59D92B264C1400E4B246 /* FruitAllergenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitAllergenView.swift; sourceTree = "<group>"; };
+		704F59DB2B264CB900E4B246 /* VegetableAllergenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableAllergenView.swift; sourceTree = "<group>"; };
 		7055ED272AE723830067D0CF /* FruitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
 		7055ED292AE723B40067D0CF /* FruitHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitHeaderView.swift; sourceTree = "<group>"; };
 		7055ED2B2AE724C60067D0CF /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				BB062D772AF72B8500BB21F2 /* VegetableHeaderView.swift */,
 				BB062D7B2AF7F4F000BB21F2 /* VegetableRowView.swift */,
 				7097576C2AF9CDE200C65DAD /* NutrientVegetableView.swift */,
+				704F59DB2B264CB900E4B246 /* VegetableAllergenView.swift */,
 			);
 			path = Vegetables;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				70A4ADAC2AE73412008FDABA /* NutrientsDetailView.swift */,
 				BBD785AA2B13C1D400DA8A0E /* SearchBarView.swift */,
 				704F59D72B16A9D500E4B246 /* FavouritesView.swift */,
+				704F59D92B264C1400E4B246 /* FruitAllergenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				BBB036D12AE48C0100D7E388 /* OnboardingView.swift in Sources */,
 				BB062D782AF72B8500BB21F2 /* VegetableHeaderView.swift in Sources */,
 				BB062D7C2AF7F4F000BB21F2 /* VegetableRowView.swift in Sources */,
+				704F59DA2B264C1400E4B246 /* FruitAllergenView.swift in Sources */,
 				70A4ADAD2AE73413008FDABA /* NutrientsDetailView.swift in Sources */,
 				BBB036DB2AE48D8A00D7E388 /* FruitModel.swift in Sources */,
 				BBFBEAEE2B25022000A5007E /* ConnectionManager.swift in Sources */,
@@ -294,6 +301,7 @@
 				704F59D62B16A98C00E4B246 /* FavouriteManager.swift in Sources */,
 				BBB036D82AE48D5C00D7E388 /* FruitData.swift in Sources */,
 				BBFBEAF42B25031600A5007E /* ToastView.swift in Sources */,
+				704F59DC2B264CB900E4B246 /* VegetableAllergenView.swift in Sources */,
 				7055ED2A2AE723B40067D0CF /* FruitHeaderView.swift in Sources */,
 				704F59D82B16A9D500E4B246 /* FavouritesView.swift in Sources */,
 				BB8FFF7F2AD64B78008D91ED /* ContentView.swift in Sources */,

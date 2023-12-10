@@ -1,15 +1,8 @@
-//
-//  VegetableDetailView.swift
-//  FruitFolio
-//
-//  Created by Hamza Azhar on 04/11/2023.
-//
-
 import SwiftUI
 
 struct VegetableDetailView: View {
     
-    let vegetable: Vegetable
+    @State var vegetable: Vegetable
     @ObservedObject var favouriteManager: FavouriteManager
     
     var body: some View {
@@ -30,11 +23,26 @@ struct VegetableDetailView: View {
                                 .foregroundColor(vegetable.gradientColors[1])
                             Spacer()
                             Button(action: {
-                                self.favouriteManager.favouriteVegetables.append(self.vegetable)
+                                if self.vegetable.isFavourite {
+                                    if let index = self.favouriteManager.favouriteVegetables.firstIndex(where: { $0.id == self.vegetable.id }) {
+                                        self.favouriteManager.favouriteVegetables.remove(at: index)
+                                    }
+                                } else {
+                                    self.favouriteManager.favouriteVegetables.append(self.vegetable)
+                                }
+                                
+                                self.vegetable.isFavourite.toggle()
                             }, label: {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(.red)
-                                    .font(.title)
+                                switch self.vegetable.isFavourite {
+                                case true:
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(.red)
+                                        .font(.title)
+                                case false:
+                                    Image(systemName: "heart")
+                                        .foregroundColor(.secondary)
+                                        .font(.title)
+                                }
                             })
                         }
                         //HEADLINE
@@ -43,6 +51,8 @@ struct VegetableDetailView: View {
                             .multilineTextAlignment(.leading)
                         //NUTRIENTS
                        NutrientVegetableView(vegetable: vegetable)
+                        
+                        VegetableAllergenView(vegetable: self.vegetable)
                             
                         //SUBHEADLINE
                         Text("Learn more about \(self.vegetable.title)".uppercased())

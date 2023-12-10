@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FruitDetailView: View {
     
-    let fruit: Fruit
+    @State var fruit: Fruit
     @ObservedObject var favouriteManager: FavouriteManager
     
     var body: some View {
@@ -28,11 +28,27 @@ struct FruitDetailView: View {
                                 .foregroundColor(fruit.gradientColors[1])
                             Spacer()
                             Button(action: {
-                                self.favouriteManager.favouriteFruits.append(self.fruit)
+                                if self.fruit.isFavourite {
+                                    if let index = self.favouriteManager.favouriteFruits.firstIndex(where: { $0.id == self.fruit.id }) {
+                                        self.favouriteManager.favouriteFruits.remove(at: index)
+                                    }
+                                } else {
+                                    self.favouriteManager.favouriteFruits.append(self.fruit)
+                                }
+                                
+                                // Toggle favorite status
+                                self.fruit.isFavourite.toggle()
                             }, label: {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(.red)
-                                    .font(.title)
+                                switch self.fruit.isFavourite {
+                                case true:
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(.red)
+                                        .font(.title)
+                                case false:
+                                    Image(systemName: "heart")
+                                        .foregroundColor(.secondary)
+                                        .font(.title)
+                                }
                             })
                         }
                         //HEADLINE
@@ -41,7 +57,9 @@ struct FruitDetailView: View {
                             .multilineTextAlignment(.leading)
                         //NUTRIENTS
                         NutrientsDetailView(fruit: fruit)
-                            
+                        
+                        FruitAllergenView(fruit: self.fruit)
+                        
                         //SUBHEADLINE
                         Text("Learn more about \(self.fruit.title)".uppercased())
                             .fontWeight(.bold)

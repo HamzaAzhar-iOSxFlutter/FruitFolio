@@ -5,14 +5,13 @@
 //  Created by Hamza Azhar on 21/10/2023.
 //
 
-import Foundation
-
 import SwiftUI
 
 //MARK: - FRUIT DATA
 let fruitsData: [Fruit] = [
     Fruit(
         title: "Banana",
+        isFavourite: false,
         headline: "Bananas are nutritious and delicious fruits enjoyed by people of all ages worldwide.",
         image: "banana",
         gradientColors: [Color("ColorLemonLight"), Color("ColorLemonDark")],
@@ -39,10 +38,13 @@ let fruitsData: [Fruit] = [
 
             So, whether you enjoy them as a convenient snack or incorporate them into your favorite recipes, bananas are a tasty and nutritious choice for a healthy diet.
         """,
-        nutrition: ["376 kJ (89 kcal)", "22.84 g", "1.09 g", "0.33 g", "A, B1, B2, B3, B5, B6, B9, C", "Potassium, Magnesium, Phosphorus, Calcium, Iron, Sodium, Zinc"]
+        nutrition: ["376 kJ (89 kcal)", "22.84 g", "1.09 g", "0.33 g", "A, B1, B2, B3, B5, B6, B9, C", "Potassium, Magnesium, Phosphorus, Calcium, Iron, Sodium, Zinc"],
+        allergens: "Glycoproteins or immunoglobulin E (IgE) reactive proteins",
+        allergenSymptoms: ["Digestive discomfort", "Skin rash", "Swelling"]
     ),
     Fruit(
         title: "Blueberry",
+        isFavourite: false,
         headline: "Blueberries are sweet, nutritious and wildly popular fruit all over the world.",
         image: "blueberry",
         gradientColors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")],
@@ -69,10 +71,13 @@ let fruitsData: [Fruit] = [
 
           Generally, nutrient contents of blueberries are a low percentage of the DV (table). One serving provides a relatively low caloric value of 57 kcal with a glycemic load of 6.
           """,
-        nutrition: ["240 kJ (57 kcal)","9.96 g","0.33 g","0.74 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc"]
+        nutrition: ["240 kJ (57 kcal)","9.96 g","0.33 g","0.74 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc"],
+        allergens: "Salicylates",
+        allergenSymptoms: ["Asthma", "Diarrhea", "Eczema"]
       ),
       Fruit(
         title: "Strawberry",
+        isFavourite: false,
         headline: "Widely appreciated for its characteristic aroma,  red color, juicy texture, and sweetness.",
         image: "strawberry",
         gradientColors: [Color("ColorStrawberryLight"), Color("ColorStrawberryDark")],
@@ -95,10 +100,13 @@ let fruitsData: [Fruit] = [
 
           Strawberries contain a modest amount of essential unsaturated fatty acids in the achene (seed) oil.
           """,
-        nutrition: ["136 kJ (33 kcal)","4.89 g","0.3 g","0.67 g","B1, B2, B3, B5, B6, B9, Choline, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["136 kJ (33 kcal)","4.89 g","0.3 g","0.67 g","B1, B2, B3, B5, B6, B9, Choline, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Fra a1",
+        allergenSymptoms: ["Skin rash", "Dizziness", "Itchy Skin"]
       ),
       Fruit(
         title: "Lemon",
+        isFavourite: false,
         headline: "There's no doubt lemons are delicious, but does adding them to water make you healthier?",
         image: "lemon",
         gradientColors: [Color("ColorLemonLight"), Color("ColorLemonDark")],
@@ -137,10 +145,13 @@ let fruitsData: [Fruit] = [
 
           The leaves of the lemon tree are used to make a tea and for preparing cooked meats and seafoods.
           """,
-        nutrition: ["121 kJ (29 kcal)","2.5 g","0.3 g","1.1 g","B1, B2, B3, B5, B6, B9, C, Choline","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"]
+        nutrition: ["121 kJ (29 kcal)","2.5 g","0.3 g","1.1 g","B1, B2, B3, B5, B6, B9, C, Choline","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"],
+        allergens: "",
+        allergenSymptoms: []
       ),
       Fruit(
         title: "Plum",
+        isFavourite: false,
         headline: "Plums are a very nutritious fruit. An excellent source of vitamins, minerals, fiber and antioxidants.",
         image: "plum",
         gradientColors: [Color("ColorPlumLight"), Color("ColorPlumDark")],
@@ -169,10 +180,13 @@ let fruitsData: [Fruit] = [
 
           A large number of plums, of the Damson variety, are also grown in Hungary, where they are called szilva and are used to make lekvar (a plum paste jam), palinka (traditional fruit brandy), plum dumplings, and other foods. In Romania, 80% of the plum production is used to create a similar brandy, called țuică.
           """,
-        nutrition: ["192 kJ (46 kcal)","9.92 g","0.28 g","0.7 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["192 kJ (46 kcal)","9.92 g","0.28 g","0.7 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Lipid Transfer Protein (LTP",
+        allergenSymptoms: ["Mouth and throat with itching and inflammation"]
       ),
       Fruit(
         title: "Lime",
+        isFavourite: false,
         headline: "Sour, round, and bright green citrus fruits. Limes are high in vitamin C, antioxidants, and other nutrients.",
         image: "lime",
         gradientColors: [Color("ColorLimeLight"), Color("ColorLimeDark")],
@@ -199,10 +213,13 @@ let fruitsData: [Fruit] = [
 
         Lime extracts and lime essential oils are frequently used in perfumes, cleaning products, and aromatherapy.
         """,
-        nutrition: ["126 kJ (30 kcal)","1.7 g","0.2 g","0.7 g","B1, B2, B3, B5, B6, B9, C","Calcium, Iron, Magnasium, Phosphorus, Potassium, Sodium"]
+        nutrition: ["126 kJ (30 kcal)","1.7 g","0.2 g","0.7 g","B1, B2, B3, B5, B6, B9, C","Calcium, Iron, Magnasium, Phosphorus, Potassium, Sodium"],
+        allergens: "Citrus allergy",
+        allergenSymptoms: ["Blisters", "Skin that burns"]
       ),
       Fruit(
         title: "Pomegranate",
+        isFavourite: false,
         headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
         image: "pomegranate",
         gradientColors: [Color("ColorPomegranateLight"), Color("ColorPomegranateDark")],
@@ -225,10 +242,13 @@ let fruitsData: [Fruit] = [
 
           Insect pests of the pomegranate can include the pomegranate butterfly Virachola isocrates and the leaf-footed bug Leptoglossus zonatus, and fruit flies and ants are attracted to unharvested ripe fruit. Pomegranate grows easily from seed, but is commonly propagated from 25 to 50 cm (10 to 20 in) hardwood cuttings to avoid the genetic variation of seedlings. Air layering is also an option for propagation, but grafting fails.
           """,
-        nutrition: ["346 kJ (83 kcal)","13.67 g","1.17 g","1.67 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["346 kJ (83 kcal)","13.67 g","1.17 g","1.67 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Pun g 1 is a Lipid Transfer Protein (LTP)",
+        allergenSymptoms: ["itching" ,"swelling", "difficulty breathing"]
       ),
       Fruit(
         title: "Pear",
+        isFavourite: false,
         headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
         image: "pear",
         gradientColors: [Color("ColorPearLight"), Color("ColorPearDark")],
@@ -261,10 +281,13 @@ let fruitsData: [Fruit] = [
 
           The Bradford pear (Pyrus calleryana 'Bradford') in particular has become widespread in North America, and is used only as an ornamental tree, as well as a blight-resistant rootstock for Pyrus communis fruit orchards. The Willow-leaved pear (Pyrus salicifolia) is grown for its attractive, slender, densely silvery-hairy leaves.
           """,
-        nutrition: ["239 kJ (57 kcal)","9.75 g","0.14 g","0.36 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["239 kJ (57 kcal)","9.75 g","0.14 g","0.36 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Birch pollen",
+        allergenSymptoms: ["Fever", "Upset stomach"]
       ),
       Fruit(
         title: "Gooseberry",
+        isFavourite: false,
         headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
         image: "gooseberry",
         gradientColors: [Color("ColorGooseberryLight"), Color("ColorGooseberryDark")],
@@ -285,10 +308,13 @@ let fruitsData: [Fruit] = [
 
           Gooseberries are edible and can be eaten as-is, or used as an ingredient in desserts, such as pies, fools and crumbles. Early pickings are generally sour and more appropriate for culinary use. They are also used to flavour beverages such as sodas, flavoured waters, or milk, and can be made into fruit wines and teas. Gooseberries can be preserved in the form of jams, dried fruit, or as the primary or a secondary ingredient in pickling, or stored in sugar syrup.
           """,
-        nutrition: ["184 kJ (44 kcal)","6.15","0.58 g","0.88 g","A, B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["184 kJ (44 kcal)","6.15","0.58 g","0.88 g","A, B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "",
+        allergenSymptoms: []
       ),
       Fruit(
         title: "Mango",
+        isFavourite: false,
         headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
         image: "mango",
         gradientColors: [Color("ColorMangoLight"), Color("ColorMangoDark")],
@@ -317,10 +343,13 @@ let fruitsData: [Fruit] = [
 
           Generally, ripe mangoes have an orange-yellow or reddish peel and are juicy for eating, while exported fruit are often picked while underripe with green peels. Although producing ethylene while ripening, unripened exported mangoes do not have the same juiciness or flavor as fresh fruit.
           """,
-        nutrition: ["250 kJ (60 kcal)","13.7 g","0.38 g","0.82 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["250 kJ (60 kcal)","13.7 g","0.38 g","0.82 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Immunoglobulin-mediated (IgE-mediated) allergy",
+        allergenSymptoms: ["Hives", "Vomiting"]
       ),
       Fruit(
         title: "Watermelon",
+        isFavourite: false,
         headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
         image: "watermelon",
         gradientColors: [Color("ColorWatermelonLight"), Color("ColorWatermelonDark")],
@@ -351,10 +380,13 @@ let fruitsData: [Fruit] = [
 
           Lack of pollen is thought to contribute to "hollow heart" which causes the flesh of the watermelon to devleop a large hole, sometimes in an intricate, symmetric shape. Watermelons suffering from hollow heart are safe to consume.
           """,
-        nutrition: ["127 kJ (30 kcal)","6.2 g","0.15 g","0.61 g","A, B1, B2, B3, B5, B6, C","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["127 kJ (30 kcal)","6.2 g","0.15 g","0.61 g","A, B1, B2, B3, B5, B6, C","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Malate dehydrogenase, triose phosphate isomerase and profilin",
+        allergenSymptoms: ["Coughing", "Cramping"]
       ),
       Fruit(
         title: "Cherry",
+        isFavourite: false,
         headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
         image: "cherry",
         gradientColors: [Color("ColorCherryLight"), Color("ColorCherryDark")],
@@ -373,10 +405,13 @@ let fruitsData: [Fruit] = [
 
           A cherry tree will take three to four years once it is planted in the orchard to produce its first crop of fruit, and seven years to attain full maturity.
           """,
-        nutrition: ["209 kJ (50 kcal)","8.5 g","0.3 g","1 g","A, B1, B2, B3, B5, B6, B9, C, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["209 kJ (50 kcal)","8.5 g","0.3 g","1 g","A, B1, B2, B3, B5, B6, B9, C, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Lipid transfer protein, a Thaumatin",
+        allergenSymptoms: ["Low blood pressure"]
       ),
       Fruit(
         title: "Grapefruit",
+        isFavourite: false,
         headline: "Sweet, bell-shaped fruits that have been enjoyed since ancient times. They can be eaten crisp or soft.",
         image: "grapefruit",
         gradientColors: [Color("ColorGrapefruitLight"), Color("ColorGrapefruitDark")],
@@ -399,10 +434,13 @@ let fruitsData: [Fruit] = [
 
           In Costa Rica, especially in Atenas, grapefruit are often cooked to remove their sourness, rendering them as sweets; they are also stuffed with dulce de leche, resulting in a dessert called toronja rellena (stuffed grapefruit). In Haiti, grapefruit is used primarily for its juice (jus de Chadèque), but also is used to make jam (confiture de Chadèque).
           """,
-        nutrition: ["138 kJ (33 kcal)","7.31 g","0.10 g","0.8 g","B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"]
+        nutrition: ["138 kJ (33 kcal)","7.31 g","0.10 g","0.8 g","B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"],
+        allergens: "Immunoglobulin",
+        allergenSymptoms: ["Itching of lips and tongue"]
       ),
       Fruit(
         title: "Apple",
+        isFavourite: false,
         headline: "Apples are one of the most popular, and exceptionally healthy fruit for good reason.",
         image: "apple",
         gradientColors: [Color("ColorAppleLight"), Color("ColorAppleDark")],
@@ -423,7 +461,9 @@ let fruitsData: [Fruit] = [
 
           Commercially popular apple cultivars are soft but crisp. Other desirable qualities in modern commercial apple breeding are a colorful skin, absence of russeting, ease of shipping, lengthy storage ability, high yields, disease resistance, common apple shape, and developed flavor. Modern apples are generally sweeter than older cultivars, as popular tastes in apples have varied over time. Most North Americans and Europeans favor sweet, subacid apples, but tart apples have a strong minority following. Extremely sweet apples with barely any acid flavor are popular in Asia, especially the Indian Subcontinent.
           """,
-        nutrition: ["218 kJ (52 kcal)","10.39 g","0.17 g","0.26 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
+        nutrition: ["218 kJ (52 kcal)","10.39 g","0.17 g","0.26 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"],
+        allergens: "Birch pollen",
+        allergenSymptoms: ["Itchy mouth and throat"]
       )
 
 ]

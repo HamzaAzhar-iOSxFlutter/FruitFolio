@@ -20,7 +20,9 @@ struct FavouritesView: View {
             ZStack {
                 switch self.networkManager.isConnected {
                 case true:
-                    self.showToastOnConnectionStatus(status: .success)
+                    if isFirstCheckDone {
+                        self.showToastOnConnectionStatus(status: .success)
+                    }
                 case false:
                     self.showToastOnConnectionStatus(status: .failure)
                 }
@@ -89,6 +91,7 @@ struct FavouritesView: View {
             .onAppear {
                 self.isShowingToast = true
                 self.networkStatus = status
+                self.isFirstCheckDone = true
             }
     }
 }
